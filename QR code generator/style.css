@@ -1,0 +1,126 @@
+*{
+    margin: 0; /* margin: top, right, bottom, left*/
+    padding: 0; /* padding: top, right, bottom, left*/
+    font-family: 'Poppins', sans-serif; /* font-family: font, fallback font*/
+    box-sizing: border-box; /* box-sizing: content-box, border-box*/
+}
+
+body {
+    background-image: url(Images/bg.jpg); /* background-image: url(path)*/
+    background-size: cover; /* background-size: auto, cover, contain */
+    background-position: center; /* background-position: left, center, right, top, bottom */
+    height: 100vh; /* height: auto, length, percentage, viewport height */
+}
+
+.container {
+    width: 400px; /* width: auto, length, percentage */
+    padding: 25px 35px; /* padding: top/bottom left/right */
+    position: absolute; /* position: static, relative, absolute, fixed */
+    top: 50%; /* top: auto, length, percentage */
+    left: 50%; /* left: auto, length, percentage */
+    transform: translate(-50%, -50%); /* transform: none, transform-functions */
+    background: #fff; /* background: color, image, position */
+    border-radius: 10px; /* border-radius: length */
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5); /* box-shadow: x-offset y-offset blur spread color */
+}
+
+
+.container p {
+    font-size: 18px; /* font-size: length, percentage */
+    font-weight: 600; /* font-weight: normal, bold, 100-900 */
+    margin-bottom: 8px; /* margin-bottom: length */
+    text-align: center;
+}
+
+.container input {
+    width: 100%; /* width: auto, length, percentage */
+    height: 50px; /* height: auto, length, percentage */
+    padding: 10px; /* padding: all-sides */
+    margin: 10px 0 20px; /* margin: top right/left bottom */
+    border: 1px solid #494eea; /* border: width style color */
+    border-radius: 5px; /* border-radius: length */
+    outline: 0; /* outline: width style color */
+}
+
+.container button {
+    width: 100%; /* width: auto, length, percentage */
+    height: 50px; /* height: auto, length, percentage */
+    background: #494eea; /* background: color, image */
+    border: 0; /* border: width style color */
+    outline: 0; /* outline: width style color */
+    border-radius: 5px; /* border-radius: length */
+    color: #fff; /* color: color-value */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* box-shadow: x-offset y-offset blur spread color */
+    font-weight: 600; /* font-weight: normal, bold, 100-900 */
+    cursor: pointer; /* cursor: auto, pointer, default */
+    margin: 20px 0; /* margin: top/bottom left/right */
+}
+
+#imgBox {
+    width: 250px; /* width: auto, length, percentage */
+    border-radius: 10px; /* border-radius: length */
+    max-height: 0; /* max-height: none, length */
+    overflow: hidden; /* overflow: visible, hidden, scroll, auto */
+    transition: max-height 1s ease-in-out; /* transition: property duration timing-function */
+}
+
+#imgBox img {
+    width: 100%; /* width: auto, length, percentage */
+    display: block; /* display: none, block, inline, inline-block */
+}
+
+#imgBox.show-img {
+    max-height: 300px; /* max-height: none, length */
+    margin: 10px auto; /* margin: top/bottom left/right */
+    border: 1px solid #d1d1d1; /* border: width style color */
+}
+
+.error {
+    animation: shake 0.1s linear 10; /* animation: name duration timing-function iteration-count */
+}
+
+@keyframes shake {
+    0% {transform: translateX(0);} /* transform at 0% */
+    25% {transform: translateX(-2px);} /* transform at 25% */
+    50% {transform: translateX(0);} /* transform at 50% */
+    75% {transform: translateX(2px);} /* transform at 75% */
+    100% {transform: translateX(0);} /* transform at 100% */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%; /* Reduce container width for smaller screens */
+        padding: 15px 20px; /* Reduce padding */
+    }
+
+    .container p {
+        font-size: 14px; /* Slightly smaller font */
+        text-align: center;
+    }
+
+    .container input {
+        height: 45px; /* Slightly reduce input height */
+        margin: 8px 0 15px; /* Adjust margins */
+    }
+
+    .container button {
+        height: 45px; /* Consistent with input height */
+        margin: 15px 0; /* Adjust margins */
+    }
+
+    #imgBox {
+        width: 200px; /* Smaller QR code container */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 12px 15px; /* Further reduce padding for very small screens */
+    }
+
+    #imgBox {
+        width: 180px; /* Even smaller QR code container */
+    }
+}
+
