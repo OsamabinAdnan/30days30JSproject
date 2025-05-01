@@ -4,6 +4,9 @@ A simple, elegant web application that allows users to generate QR codes instant
 
 ![QR Code Generator](Images/qrcode.png)
 
+## Live Demo
+[QR code generator](https://qrcode-generator-osamabinadnan.vercel.app/)
+
 ## 🚀 Features
 
 - Generate QR codes from any text or URL
